@@ -21,8 +21,6 @@ Gem::Specification.new do |s|
     "lib/generators/turkee/templates/create_turkee_imported_assignments.rb",
     "lib/generators/turkee/templates/create_turkee_tasks.rb",
     "lib/generators/turkee/templates/turkee.rb",
-    "lib/generators/turkee/templates/turkee_imported_assignment.rb",
-    "lib/generators/turkee/templates/turkee_task.rb",
     "lib/generators/turkee/turkee_generator.rb",
     "lib/tasks/turkee.rb",
     "lib/turkee.rb",
