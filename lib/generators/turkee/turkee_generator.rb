@@ -19,11 +19,13 @@ class TurkeeGenerator < Rails::Generators::Base
   end
   
   def create_migrations
-    migration_template "turkee_migration.rb.erb", "db/migrate/create_turkee_tasks.rb"
+    template            "turkee_task.rb",         "app/models/turkee_task.rb"
+    migration_template  "create_turkee_tasks.rb", "db/migrate/create_turkee_tasks.rb"
     
     # Need this sleep so that we don't get the same migration timestamp for both migrations
     sleep 1
     
-    migration_template "turkee_imported_assignments.rb.erb", "db/migrate/create_turkee_imported_assignments.rb"
+    template            "turkee_imported_assignment.rb",          "app/models/turkee_imported_assignment.rb"
+    migration_template  "create_turkee_imported_assignments.rb",  "db/migrate/create_turkee_imported_assignments.rb"
   end
 end
